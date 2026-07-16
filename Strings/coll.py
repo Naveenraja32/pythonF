@@ -34,25 +34,16 @@ from collections import *
 # print(data)
 
 
-str="[{()}]"
+
+str=input("Enter the string: ")
 data=[]
+pairs={')': '(', ']': '[', '}': '{'}
 for i in str:
-    if i in ['(','[','{']:
+    if i in pairs.values():
         data.append(i)
+    elif data and pairs[i]==data[-1]:
+        data.pop()
     else:
-        if len(data)==0:
-            print("Not Balanced")
-            break
-        else:
-            x=data.pop()
-            if x=='(' and i==')':
-                continue
-            elif x=='[' and i==']':
-                continue
-            elif x=='{' and i=='}':
-                continue
-            else:
-                print("Not Balanced")
-                break
-else:
-    print("Balanced")
+        print(False)
+        quit()
+print(True)
