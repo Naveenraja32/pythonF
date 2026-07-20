@@ -35,15 +35,67 @@ from collections import *
 
 
 
-str=input("Enter the string: ")
-data=[]
-pairs={')': '(', ']': '[', '}': '{'}
-for i in str:
-    if i in pairs.values():
-        data.append(i)
-    elif data and pairs[i]==data[-1]:
-        data.pop()
-    else:
-        print(False)
-        quit()
-print(True)
+# str=input("Enter the string: ")
+# data=[]
+# pairs={')': '(', ']': '[', '}': '{'}
+# for i in str:
+#     if i in pairs.values():
+#         data.append(i)
+#     elif data and pairs[i]==data[-1]:
+#         data.pop()
+#     else:
+#         print(False)
+#         quit()
+# print(True)
+
+# str ="india is my country"
+# v=[]
+# str1=[]
+# j=0
+# for i in str:
+#     if i in 'aeiou':
+#         v.append(i)
+# v.reverse() 
+    
+# for i in str:
+#     if i in 'aeiou':
+#         str1.append(v[j])
+#         j+=1
+#     else:
+#         str1.append(i)
+# print(''.join(str1))        
+
+n=int(input("Enter the number  "))
+temp=temp1=n1=n
+c=no=0
+while(n!=0):
+    temp=n%10
+    c+=1
+    n=n//10
+print("The number of digits in the number is ",c)
+while(temp1!=0):
+    e=temp1%10
+    no=e**c+no
+    temp1=temp1//10
+result="Armstrong number" if no==n1 else "Not an Armstrong number"
+print(result)
+
+
+
+keys=["qwertyuiop","asdfghjkl","zxcvbnm"]
+words=["Hello","Alaska","Dad","has"]
+rt=[]
+for i in words:
+    base=''
+    wrdslwr=i.lower()
+    for j in wrdslwr:
+        if not base:
+            for k in keys:
+                if j in k:
+                    base=k
+                    break
+        elif j not in base:break
+    else:rt.append(i)
+print(rt)
+  
+                  
