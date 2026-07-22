@@ -65,37 +65,49 @@ from collections import *
 #         str1.append(i)
 # print(''.join(str1))        
 
-n=int(input("Enter the number  "))
-temp=temp1=n1=n
-c=no=0
-while(n!=0):
-    temp=n%10
-    c+=1
-    n=n//10
-print("The number of digits in the number is ",c)
-while(temp1!=0):
-    e=temp1%10
-    no=e**c+no
-    temp1=temp1//10
-result="Armstrong number" if no==n1 else "Not an Armstrong number"
-print(result)
+# n=int(input("Enter the number  "))
+# temp=temp1=n1=n
+# c=no=0
+# while(n!=0):
+#     temp=n%10
+#     c+=1
+#     n=n//10
+# print("The number of digits in the number is ",c)
+# while(temp1!=0):
+#     e=temp1%10
+#     no=e**c+no
+#     temp1=temp1//10
+# result="Armstrong number" if no==n1 else "Not an Armstrong number"
+# print(result)
 
 
 
-keys=["qwertyuiop","asdfghjkl","zxcvbnm"]
-words=["Hello","Alaska","Dad","has"]
-rt=[]
-for i in words:
-    base=''
-    wrdslwr=i.lower()
-    for j in wrdslwr:
-        if not base:
-            for k in keys:
-                if j in k:
-                    base=k
-                    break
-        elif j not in base:break
-    else:rt.append(i)
-print(rt)
+# keys=["qwertyuiop","asdfghjkl","zxcvbnm"]
+# words=["Hello","Alaska","Dad","has"]
+# rt=[]
+# for i in words:
+#     base=''
+#     wrdslwr=i.lower()
+#     for j in wrdslwr:
+#         if not base:
+#             for k in keys:
+#                 if j in k:
+#                     base=k
+#                     break
+#         elif j not in base:break
+#     else:rt.append(i)
+# print(rt)
   
-                  
+# print({chr(x+96):x for x in range(1,27)})
+dt={'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20, 'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26}
+
+word = 'dbb'
+right = left = 0
+for i in word: right += ord(i)-96
+for i in word:
+    value = ord(i)-96
+    left += value
+    right -= value
+    if left==right:print(True);quit()
+print(False)
+
