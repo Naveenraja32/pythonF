@@ -98,13 +98,23 @@ from collections import *
 #     else:rt.append(i)
 # print(rt)
 
-word = 'axz'
-right = left = 0
-for i in word: right += ord(i)-96
-for i in word:
-    value = ord(i)-96
-    left += value
-    right -= value
-    if left==right:print(True);quit()
-print(False)
+# word = 'axz'
+# right = left = 0
+# for i in word: right += ord(i)-96
+# for i in word:
+#     value = ord(i)-96
+#     left += value
+#     right -= value
+#     if left==right:print(True);quit()
+# print(False)
 
+import os
+from os import path
+os.makedirs(name='Etho', exist_ok=True)
+spath=r'C:\Users\DELL\Documents\pythonF\Strings\coll.py'
+print(path.exists(spath))
+print(path.basename(spath))
+# print(path.expanduser('~/Etho'))creates a folder outside the documents folder
+print(path.dirname(spath))  
+print(os.getcwd())
+print(os.getlogin())
