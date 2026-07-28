@@ -118,3 +118,27 @@ print(path.basename(spath))
 print(path.dirname(spath))  
 print(os.getcwd())
 print(os.getlogin())
+# os.chdir(r'C:\Users\DELL\Documents')
+# print(os.getcwd())
+# os.removedirs('Etho')
+os.startfile("https://www.leetcode.com")
+os.startfile(spath)
+import os
+
+# Open file1.txt in append mode and write to it
+with open('file1.txt', 'a') as f1:
+    f1.write(' World')
+
+# Create a hard link named file2.txt pointing to file1.txt
+os.link('file1.txt', 'file2.txt')
+
+# Read and print the contents of file2.txt
+with open('file2.txt', 'r') as f2:
+    print(f2.read())
+
+# Read and print the contents of file1.txt
+with open('file1.txt', 'r') as f3:
+    print(f3.read())
+
+# Print the number of CPUs on the system
+print(os.cpu_count())
