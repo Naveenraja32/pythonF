@@ -24,6 +24,8 @@ else:
 # ws.append(['A',23,'A@gmail.com'])
 # ws.append(['B',24,'B@gmail.com'])
 # ws.append(['C',24,'C@gmail.com'])
-ws.delete_rows(5,3)
+# ws.delete_rows(5,3)
 t.ref = f'A1:{get_column_letter(ws.max_column)}{ws.max_row}'
+# workbook.create_sheet('Data2')
+# print(workbook.sheetnames)
 workbook.save(path)
