@@ -21,12 +21,36 @@
 #         result+=chr(i+97)+str(st1[i])
     
 # print(result)
-string1=input("Enter the string: ")
-result = currentWord = ''
-for i in string1+' ':
-    if i == ' ':
-        result = ' '+currentWord+result
-        currentWord = ''
-    else:currentWord += i
-print(result[1:] if result else '')
+
+
+# string1=input("Enter the string: ")
+# result = currentWord = ''
+# for i in string1+' ':
+#     if i == ' ':
+#         result = ' '+currentWord+result
+#         currentWord = ''
+#     else:currentWord += i
+# print(result[1:] if result else '')
  
+ 
+ # Form words in diagonal flow
+words = ['car','can','dad']
+largest = None
+for i in words:
+    currentLength = len(i)
+    if largest==None or currentLength>largest:largest=currentLength
+words = [x+' '*(largest-len(x)) for x in words]
+result = []
+index = reverse = 1
+for i in words:
+    if not result:result = list(i)
+    else:
+        for x in range(largest-1):
+            if reverse:result[index+x] = i[x]+result[index+x]
+            else:result[index+x] += i[x]
+            reverse = not reverse
+        if largest%2:reverse = not reverse
+        result.append(i[-1])
+        index += 1
+
+print(result)
