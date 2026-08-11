@@ -50,14 +50,14 @@
 #     if(i==1 or i==n):print(("# " * i).strip())
 #     else:print("# " + "  " * (i - 2) + "# ")
 
-n=int(input("Enter the number of rows: "))
-for i in range(1,n+1):
-    pat="#   "
-    sp=" "
-    if i==1 or i==n:
-        print((sp*len(pat))*(n-i) + (pat * i).strip())
-    else:
-        print((sp*len(pat)*(n-i))+ pat + (sp*len(pat)* (i - 2)) + pat.strip())
+# n=int(input("Enter the number of rows: "))
+# for i in range(1,n+1):
+#     pat="#   "
+#     sp=" "
+#     if i==1 or i==n:
+#         print((sp*len(pat))*(n-i) + (pat * i).strip())
+#     else:
+#         print((sp*len(pat)*(n-i))+ pat + (sp*len(pat)* (i - 2)) + pat.strip())
     
 
 # sr="aaaabbaabbabbaa"
@@ -108,3 +108,7 @@ for i in range(1,n+1):
 #         quit()
 #     str[cw]=cm
 # print(True)
+
+# n = int(input("enter no"))
+# for i in range(n,1):
+#     print("#"*i)
