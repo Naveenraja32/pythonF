@@ -33,24 +33,43 @@
 # print(result[1:] if result else '')
  
  
- # Form words in diagonal flow
-words = ['car','can','dad']
-largest = None
-for i in words:
-    currentLength = len(i)
-    if largest==None or currentLength>largest:largest=currentLength
-words = [x+' '*(largest-len(x)) for x in words]
-result = []
-index = reverse = 1
-for i in words:
-    if not result:result = list(i)
-    else:
-        for x in range(largest-1):
-            if reverse:result[index+x] = i[x]+result[index+x]
-            else:result[index+x] += i[x]
-            reverse = not reverse
-        if largest%2:reverse = not reverse
-        result.append(i[-1])
-        index += 1
+# Form words in diagonal flow
+# words = ['car','can','dad']
+# largest = None
+# for i in words:
+#     currentLength = len(i)
+#     if largest==None or currentLength>largest:largest=currentLength
+# words = [x+' '*(largest-len(x)) for x in words]
+# result = []
+# index = reverse = 1
+# for i in words:
+#     if not result:result = list(i)
+#     else:
+#         for x in range(largest-1):
+#             if reverse:result[index+x] = i[x]+result[index+x]
+#             else:result[index+x] += i[x]
+#             reverse = not reverse
+#         if largest%2:reverse = not reverse
+#         result.append(i[-1])
+#         index += 1
 
-print(result)
+# print(result)
+
+#zigzag conversion
+
+# str = "PAYPALISHIRING"
+# numRows = 3
+# stream =['']*numRows
+# index=rev=0
+# for x in str:
+#     stream[index]+=x
+#     if index==0:rev=0
+#     elif index==numRows-1:rev=1
+#     index+= -1 if rev else 1
+# print(''.join(stream))
+
+#pyramid
+r=int(input("Enter the number of rows: "))
+s="  "
+for i in range(0, r ):
+    print(s * (r - i) + '* ' * ((i*2) + 1))
