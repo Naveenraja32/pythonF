@@ -76,4 +76,3 @@ def pyramid(n):
             print(s * (n - i) + '* ' * ((i*2) + 1))
         else:
             print(s * (n     - i) + '* ' + '  ' * ((i*2) - 1) + '* ')
-pyramid(int(input("Enter the number of rows: ")))
