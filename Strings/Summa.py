@@ -69,7 +69,11 @@
 # print(''.join(stream))
 
 #pyramid
-r=int(input("Enter the number of rows: "))
-s="  "
-for i in range(0, r ):
-    print(s * (r - i) + '* ' * ((i*2) + 1))
+def pyramid(n):
+    s="  "
+    for i in range(0, n):
+        if i == 0 or i == n-1:
+            print(s * (n - i) + '* ' * ((i*2) + 1))
+        else:
+            print(s * (n     - i) + '* ' + '  ' * ((i*2) - 1) + '* ')
+pyramid(int(input("Enter the number of rows: ")))
