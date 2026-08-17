@@ -69,10 +69,22 @@
 # print(''.join(stream))
 
 #pyramid
-def pyramid(n):
-    s="  "
-    for i in range(0, n):
-        if i == 0 or i == n-1:
-            print(s * (n - i) + '* ' * ((i*2) + 1))
-        else:
-            print(s * (n     - i) + '* ' + '  ' * ((i*2) - 1) + '* ')
+# def pyramid(n):
+#     s="  "
+#     for i in range(0, n):
+#         if i == 0 or i == n-1:
+#             print(s * (n - i) + '* ' * ((i*2) + 1))
+#         else:
+#             print(s * (n     - i) + '* ' + '  ' * ((i*2) - 1) + '* ')
+
+#number trainagle
+number = 1
+# Loop for the number of rows
+for i in range(1, 4):
+    # Loop to print numbers in each row
+    for j in range(i):
+        print(number, end=" ")
+        number += 1
+    print()  # Move to the next line
+
+        
