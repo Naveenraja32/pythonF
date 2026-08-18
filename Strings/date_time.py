@@ -21,3 +21,6 @@ print(datetime.strftime(now + timedelta(days=1), '%d-%m-%Y'))
 # except Exception as e:
 #     print(type(e).__name__, ":", e)
 print(datetime.strftime(now, '%H:%M'))
+
+str='12-12-1947'
+print(datetime.strptime(str, '%d-%m-%Y').date())
