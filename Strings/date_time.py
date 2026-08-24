@@ -9,7 +9,7 @@ dateB = datetime.strptime('03-08-2026', '%d-%m-%Y').replace(tzinfo=timeZone)
 
 print(datetime.combine(now, time=time(8,59,50)))
 
-# This will print the days/hours passed since August 3rd
+# This will print the days/hours passed since August 3rd 
 print(now - dateB)
 
 # Fixed the extra parenthesis error here
